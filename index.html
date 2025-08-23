@@ -17,12 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin:0;
-      font-family: 'Heebo', sans-serif;
-      background:#111;
-      color:#fff;
-    }
+    body { margin:0; font-family:'Heebo',sans-serif; background:#111; color:#fff; }
 
     header {
       background: url('images/run.jpg') center/cover no-repeat;
@@ -30,100 +25,53 @@
       text-align: center;
       color: #fff;
     }
-    header h1 {
-      font-size: 2.6em;
-      font-weight: 900;
-      margin: 0;
-      color: #fff;
-      text-shadow: 0 3px 14px rgba(0,0,0,.6);
-      background: rgba(0,0,0,0.45);
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 8px;
+    header h1{
+      font-size:2.6em; font-weight:900; margin:0; color:#fff;
+      text-shadow:0 3px 14px rgba(0,0,0,.6);
+      background:rgba(0,0,0,0.45); display:inline-block; padding:8px 14px; border-radius:8px;
     }
-    header h2 {
-      font-size: 1.4em;
-      font-weight: 700;
-      margin-top: 14px;
-      color: #ffe600; /* זהב/צהוב */
-      text-shadow: 0 2px 10px rgba(0,0,0,.6);
-      background: rgba(0,0,0,0.35);
-      display: inline-block;
-      padding: 6px 12px;
-      border-radius: 6px;
+    header h2{
+      font-size:1.4em; font-weight:700; margin-top:14px; color:#ffe600;
+      text-shadow:0 2px 10px rgba(0,0,0,.6);
+      background:rgba(0,0,0,0.35); display:inline-block; padding:6px 12px; border-radius:6px;
     }
 
-    /* תיקוני פריסה בסיסיים */
-    * { box-sizing: border-box; }
-    img { display: block; max-width: 100%; height: auto; }
+    *{ box-sizing:border-box; } img{ display:block; max-width:100%; height:auto; }
+    main, section{ position:relative; z-index:1; }
+    section{ padding:40px 20px; max-width:900px; margin:0 auto; }
 
-    /* המקטעים תמיד מעל הרקע */
-    main, section { position: relative; z-index: 1; }
+    h2{ color:#ff3b30; font-weight:800; font-size:32px; margin:0 0 14px 0; text-align:right; }
+    p{ line-height:1.6; }
+    ul{ margin:0 0 0 0; padding-right:1.2em; line-height:1.7; }
+    li{ margin:4px 0; }
 
-    /* ריווח אחיד */
-    section { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
+    .cta{ text-align:center; margin-top:30px; }
+    .btn{ display:inline-block; margin:10px; padding:12px 20px; border-radius:30px; text-decoration:none; font-weight:bold; }
+    .btn.whatsapp{ background:#25D366; color:#111; }
+    .btn.mail{ background:#0ea5e9; color:#111; }
 
-    h2 {
-      color: #ff3b30;
-      font-weight: 800;
-      font-size: 32px;
-      margin: 0 0 14px 0;
-      text-align: right;
-    }
-    p { line-height: 1.6; }
-
-    .cta { text-align: center; margin-top: 30px; }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .btn.whatsapp { background: #25D366; color: #111; }
-    .btn.mail { background: #0ea5e9; color: #111; }
-
-    footer {
-      background:#222;
-      color:#aaa;
-      padding:20px;
-      text-align:center;
-    }
+    footer{ background:#222; color:#aaa; padding:20px; text-align:center; }
 
     /* גלריה רספונסיבית */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-      margin-top: 16px;
+    .gallery{
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px; margin-top:16px;
     }
-    .gallery img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 12px;
-      border: 1px solid #333;
+    .gallery img{
+      width:100%; height:240px; object-fit:cover;
+      border-radius:12px; border:1px solid #333;
     }
-
     /* חיתוך מותאם לפי תמונה */
-    .gallery img.run {
-      object-position: 50% 25%; /* מרחיק חיתוך מהראש */
-    }
-    .gallery img.jym {
-      object-position: 50% 30%; /* אפשר לשחק 20–40% */
-    }
-    .gallery img.portrait {
-      object-position: 50% 20%;
-    }
+    .gallery img.run{ object-position:50% 25%; }
+    .gallery img.jym{ object-position:50% 30%; }
+    .gallery img.portrait{ object-position:50% 20%; }
 
-    /* התאמה למסכים קטנים */
-    @media (max-width: 640px) {
-      header { padding: 60px 16px; }
-      header h1 { font-size: 1.9em; }
-      header h2 { font-size: 1.15em; }
-      h2 { font-size: 26px; }
-      .gallery img { height: 200px; }
+    @media (max-width:640px){
+      header{ padding:60px 16px; }
+      header h1{ font-size:1.9em; }
+      header h2{ font-size:1.15em; }
+      h2{ font-size:26px; }
+      .gallery img{ height:200px; }
     }
   </style>
 </head>
@@ -134,30 +82,66 @@
   </header>
 
   <main>
+    <!-- התהליך -->
     <section>
       <h2>התהליך</h2>
-      <p>במפגשים איתי, הספורטאים והספורטאיות ילמדו וירכשו כלים לחיזוק הביטחון העצמי, שיפור יכולות הריכוז והמיקוד, התאוששות מאי הצלחות, התמודדות עם לחץ ועוד.</p>
+      <p>
+        במפגשים איתי, הספורטאים והספורטאיות לומדים ומתרגלים כלים לחיזוק הביטחון העצמי, שיפור יכולות הריכוז והמיקוד,
+        התאוששות מהירה מטעויות, התמודדות עם לחץ, בניית רוטינות מנצחות – ועוד. התהליך כולל אבחון קצר, הגדרת מטרות
+        ובניית תוכנית עבודה אישית/קבוצתית.
+      </p>
     </section>
 
+    <!-- מה תרוויחו -->
+    <section>
+      <h2>מה תרוויחו?</h2>
+      <ul>
+        <li>שליטה בלחץ וויסות רגשי בזמן אמת.</li>
+        <li>ביטחון עצמי ועמידות לאחר טעויות/כישלונות.</li>
+        <li>רוטינות קדם־ביצוע, פוקוס ומשמעת מנטלית לאורך עונה.</li>
+        <li>תכנון מנטלי לפני משחק/תחרות וביצוע עקבי תחת לחץ.</li>
+      </ul>
+    </section>
+
+    <!-- מי אני -->
     <section>
       <h2>מי אני</h2>
-      <p>שמי דותן אבירם. כמי שמשתתף בעצמי בתחרויות סבולת (איש ברזל וטריאתלונים) וכמי שכל חייו עוסק בספורט ובעולם מדעי ההתנהגות – אני מאמין גדול באימון מנטלי ככלי לשיפור ביצועים ספורטיביים. יש לי ניסיון מוכח בעבודה עם ספורטאים וספורטאיות ממגוון ענפים (קבוצתיים ויחידניים) לחיזוק החוסן המנטלי והגעה לשיאים חדשים.</p>
+      <p>
+        שמי דותן אבירם. כמי שמתחרה בספורט סבולת (איש ברזל, טריאתלונים) וכמי שחי ספורט ומדעי ההתנהגות מעל 20 שנה,
+        אני מביא שילוב של ניסיון שטח עם בסיס מחקרי. אני מאמן מנטלי לספורטאים וספורטאיות במגוון ענפים
+        (כדורסל, כדורגל, טניס, בדמינטון, שחייה ועוד), עובד גם עם קבוצות נוער ובוגרים, ומלווה מנהלים/ות בארגונים
+        בהטמעת כלים של חוסן וביצועים. הגישה שלי פרקטית, ממוקדת מטרות ומבוססת ראיות – כדי שתראו שיפור מדיד במגרש ובחיים.
+      </p>
     </section>
 
+    <!-- מה אני מציע -->
+    <section>
+      <h2>מה אני מציע?</h2>
+      <ul>
+        <li>ליווי ואימון מנטלי אישי לספורטאים/יות – תהליך ממוקד, דיסקרטי ומותאם ענף, תפקיד ויעדים.</li>
+        <li>ליווי מנטלי לקבוצות ספורט – פיתוח ריכוז, תקשורת, עמידה בלחץ, זהות קבוצתית ומנהיגות.</li>
+        <li>סדנאות לקבוצות ספורט ולארגונים – כלים פרקטיים לחוסן, ביצועים ועבודת צוות.</li>
+      </ul>
+    </section>
+
+    <!-- גלריה -->
     <section>
       <h2>מהשטח</h2>
       <div class="gallery">
         <img src="images/run.jpg" alt="תחרות – התמדה ומכוונות" class="run">
         <img src="images/jym.jpg" alt="סדנה במגרש" class="jym">
-        <img src="images/profile..jpeg" alt="פנים מאחורי השיטה"
-             class="portrait"
+        <img src="images/profile..jpeg" alt="פנים מאחורי השיטה" class="portrait"
              onerror="this.onerror=null; this.src='images/profile.jpg';">
       </div>
     </section>
 
+    <!-- יצירת קשר -->
     <section>
       <h2>מעניין אתכם לשמוע עוד?</h2>
-      <p>מוזמנים לפנות אלי בווטסאפ, בטלפון <strong>052-9245186</strong>, או במייל: <strong>dotan.aviram@gmail.com</strong>.</p>
+      <p>
+        מוזמנים לפנות אלי בווטסאפ, בטלפון <strong>052-9245186</strong>, או במייל
+        <strong>dotan.aviram@gmail.com</strong>.
+      </p>
       <div class="cta">
         <a href="https://wa.me/972529245186?text=היי%20דותן,%20אני%20מעוניין/ת%20בפרטים" class="btn whatsapp">דברו איתי בוואטסאפ</a>
         <a href="mailto:dotan.aviram@gmail.com?subject=שיחת%20היכרות" class="btn mail">שליחת מייל</a>
@@ -169,8 +153,6 @@
     © <span id="y"></span> דותן אבירם – אימון מנטלי לספורטאים וספורטאיות
   </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
