@@ -3,29 +3,92 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet" />
   <title>דותן אבירם | אימון מנטלי לספורטאים</title>
   <meta name="description" content="אימון מנטלי לספורטאים וספורטאיות לשיפור ההישגים – חוסן מנטלי, ביטחון עצמי, ריכוז והתמודדות עם לחץ." />
+  <!-- טעינת גופן Heebo -->
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {margin:0; font-family: 'Heebo', sans-serif; background:#111; color:#fff;}
-    header {background: url('images/run.jpg') center/cover no-repeat; padding: 80px 20px; text-align: center; color: #fff;}
-    header h1 {font-size: 2em; margin: 0; color:#f33;}
-    header h2 {font-size: 1.2em; font-weight: 400; margin-top: 10px;}
-    section {padding: 40px 20px; max-width: 900px; margin: auto;}
-    h2 {color: #f33; margin-bottom: 10px;}
-    p {line-height: 1.6;}
-    .cta {text-align: center; margin-top: 30px;}
-    .btn {display: inline-block; margin: 10px; padding: 12px 20px; border-radius: 30px; text-decoration: none; font-weight: bold;}
-    .btn.whatsapp {background: #25D366; color: #111;}
-    .btn.mail {background: #0ea5e9; color: #111;}
-    .gallery {display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .gallery img {width:100%;height:220px;object-fit:cover;border-radius:10px;border:1px solid #333}
-    .note {color:#bbb;font-size:13px;margin-top:6px}
-    footer {background:#222; color:#aaa; padding:20px; text-align:center;}
+    body {
+      margin:0;
+      font-family: 'Heebo', sans-serif;
+      background:#111;
+      color:#fff;
+    }
+
+    header {
+      background: url('images/run.jpg') center/cover no-repeat;
+      padding: 80px 20px;
+      text-align: center;
+      color: #fff;
+    }
+    header h1 {
+      font-size: 2em;
+      margin: 0;
+      color:#f33;
+    }
+    header h2 {
+      font-size: 1.2em;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    /* תיקון פריסה בסיסי */
+    * { box-sizing: border-box; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    /* שים את המקטעים מעל הרקע תמיד */
+    main, section { position: relative; z-index: 1; }
+
+    /* ריווח אחיד */
+    section { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
+
+    h2 { color: #f33; margin-bottom: 10px; }
+    p { line-height: 1.6; }
+
+    .cta { text-align: center; margin-top: 30px; }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn.whatsapp { background: #25D366; color: #111; }
+    .btn.mail { background: #0ea5e9; color: #111; }
+
+    footer {
+      background:#222;
+      color:#aaa;
+      padding:20px;
+      text-align:center;
+    }
+
+    /* גלריה רספונסיבית, בלי חפיפות */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .gallery img {
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid #333;
+    }
+
+    .note {
+      color:#bbb;
+      font-size:13px;
+      margin-top:6px;
+    }
+
+    /* התאמה למסכים קטנים */
     @media (max-width: 640px) {
-      header {padding: 60px 16px;}
-      header h1 {font-size: 1.6em;}
-      header h2 {font-size: 1.05em;}
+      header { padding: 60px 16px; }
+      header h1 { font-size: 1.6em; }
+      header h2 { font-size: 1.05em; }
     }
   </style>
 </head>
@@ -51,7 +114,8 @@
       <div class="gallery">
         <img src="images/run.jpg" alt="תחרות – התמדה ומכוונות">
         <img src="images/jym.jpg" alt="סדנה במגרש">
-        <img src="images/profile.jpeg" alt="פנים מאחורי השיטה">
+        <img src="images/profile.jpeg" alt="פנים מאחורי השיטה"
+             onerror="this.onerror=null; this.src='images/profile.jpg';">
       </div>
       <p class="note">* אם יש משתתפים בתמונות – מומלץ לטשטש פנים לפני פרסום.</p>
     </section>
@@ -60,8 +124,8 @@
       <h2>מעניין אתכם לשמוע עוד?</h2>
       <p>מוזמנים לפנות אלי בווטסאפ, בטלפון <strong>052-9245186</strong>, או במייל: <strong>dotan.aviram@gmail.com</strong>.</p>
       <div class="cta">
-        <a href="https://wa.me/972529245186?text=%D7%94%D7%99%D7%99%20%D7%93%D7%95%D7%AA%D7%9F%2C%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%2F%D7%AA%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%94%D7%9B%D7%A8%D7%95%D7%AA" class="btn whatsapp">דברו איתי בוואטסאפ</a>
-        <a href="mailto:dotan.aviram@gmail.com?subject=%D7%A9%D7%99%D7%97%D7%AA%20%D7%94%D7%9B%D7%A8%D7%95%D7%AA" class="btn mail">שליחת מייל</a>
+        <a href="https://wa.me/972529245186?text=היי%20דותן,%20אני%20מעוניין/ת%20בפרטים" class="btn whatsapp">דברו איתי בוואטסאפ</a>
+        <a href="mailto:dotan.aviram@gmail.com?subject=שיחת%20היכרות" class="btn mail">שליחת מייל</a>
       </div>
     </section>
   </main>
@@ -69,6 +133,9 @@
   <footer>
     © <span id="y"></span> דותן אבירם – אימון מנטלי לספורטאים וספורטאיות
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
