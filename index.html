@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>דותן אבירם | אימון מנטלי לספורטאים</title>
   <meta name="description" content="אימון מנטלי לספורטאים וספורטאיות לשיפור ההישגים – חוסן מנטלי, ביטחון עצמי, ריכוז והתמודדות עם לחץ." />
-  <!-- טעינת גופן Heebo -->
+  <!-- גופן Heebo -->
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin:0;
@@ -32,11 +33,11 @@
       margin-top: 10px;
     }
 
-    /* תיקון פריסה בסיסי */
+    /* תיקוני פריסה בסיסיים */
     * { box-sizing: border-box; }
     img { display: block; max-width: 100%; height: auto; }
 
-    /* שים את המקטעים מעל הרקע תמיד */
+    /* המקטעים תמיד מעל הרקע */
     main, section { position: relative; z-index: 1; }
 
     /* ריווח אחיד */
@@ -64,7 +65,7 @@
       text-align:center;
     }
 
-    /* גלריה רספונסיבית, בלי חפיפות */
+    /* גלריה רספונסיבית */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -72,10 +73,17 @@
       margin-top: 16px;
     }
     .gallery img {
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
+      aspect-ratio: 16 / 10;   /* יחס עקבי לתמונות האופקיות */
+      object-fit: cover;        /* חיתוך “יפה” ללא עיוות */
       border-radius: 12px;
       border: 1px solid #333;
+    }
+    /* התאמה לתמונת הפרופיל (פורטרט) – בלי חיתוך ראש */
+    .gallery img.portrait {
+      aspect-ratio: auto;
+      max-height: 320px;
+      object-fit: contain;
+      background:#000;          /* אם נשארים פסים – שיהיו שחורים ונקיים */
     }
 
     .note {
@@ -115,6 +123,7 @@
         <img src="images/run.jpg" alt="תחרות – התמדה ומכוונות">
         <img src="images/jym.jpg" alt="סדנה במגרש">
         <img src="images/profile..jpeg" alt="פנים מאחורי השיטה"
+             class="portrait"
              onerror="this.onerror=null; this.src='images/profile.jpg';">
       </div>
       <p class="note">* אם יש משתתפים בתמונות – מומלץ לטשטש פנים לפני פרסום.</p>
