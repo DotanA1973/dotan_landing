@@ -105,7 +105,14 @@
       border-radius: 12px;
       border: 1px solid #333;
     }
-    /* התאמה לתמונת הפרופיל */
+
+    /* חיתוך מותאם לפי תמונה */
+    .gallery img.run {
+      object-position: 50% 25%; /* מרחיק חיתוך מהראש */
+    }
+    .gallery img.jym {
+      object-position: 50% 30%; /* אפשר לשחק 20–40% */
+    }
     .gallery img.portrait {
       object-position: 50% 20%;
     }
@@ -140,8 +147,8 @@
     <section>
       <h2>מהשטח</h2>
       <div class="gallery">
-        <img src="images/run.jpg" alt="תחרות – התמדה ומכוונות">
-        <img src="images/jym.jpg" alt="סדנה במגרש">
+        <img src="images/run.jpg" alt="תחרות – התמדה ומכוונות" class="run">
+        <img src="images/jym.jpg" alt="סדנה במגרש" class="jym">
         <img src="images/profile..jpeg" alt="פנים מאחורי השיטה"
              class="portrait"
              onerror="this.onerror=null; this.src='images/profile.jpg';">
