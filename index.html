@@ -6,7 +6,7 @@
   <title>דותן אבירם | אימון מנטלי לספורטאים</title>
   <meta name="description" content="אימון מנטלי לספורטאים וספורטאיות לשיפור ההישגים – חוסן מנטלי, ביטחון עצמי, ריכוז והתמודדות עם לחץ." />
 
-  <!-- תגיות Open Graph לשיתוף -->
+  <!-- תגיות Open Graph לשיתוף (עדכן את ה-URL אם יש דומיין משלך) -->
   <meta property="og:title" content="אימון מנטלי לספורטאים – דותן אבירם">
   <meta property="og:description" content="חוסן מנטלי, ריכוז, בטחון והתמודדות עם לחץ – לשיפור הישגים.">
   <meta property="og:image" content="https://dotan-landing.vercel.app/images/profile.jpeg">
@@ -37,13 +37,9 @@
     }
 
     *{ box-sizing:border-box; } img{ display:block; max-width:100%; height:auto; }
-    main, section{ position:relative; z-index:1; }
     section{ padding:40px 20px; max-width:900px; margin:0 auto; }
-
     h2{ color:#ff3b30; font-weight:800; font-size:32px; margin:0 0 14px 0; text-align:right; }
-    p{ line-height:1.6; }
-    ul{ margin:0; padding-right:1.2em; line-height:1.7; }
-    li{ margin:4px 0; }
+    p, li{ line-height:1.6; }
 
     .cta{ text-align:center; margin-top:30px; }
     .btn{ display:inline-block; margin:10px; padding:12px 20px; border-radius:30px; text-decoration:none; font-weight:bold; }
@@ -61,11 +57,12 @@
       width:100%; height:240px; object-fit:cover;
       border-radius:12px; border:1px solid #333;
     }
+    /* חיתוך מותאם לפי תמונה */
     .gallery img.run{ object-position:50% 25%; }
     .gallery img.jym{ object-position:50% 30%; }
     .gallery img.portrait{ object-position:50% 20%; }
 
-    /* עיצוב לציטוטי לקוחות */
+    /* ציטוטים */
     .testimonial {
       background: rgba(255,255,255,0.05);
       border-right: 4px solid #ff3b30;
@@ -91,7 +88,16 @@
       bottom: 8px;
       left: 8px;
     }
+    .author {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.9em;
+      font-style: normal;
+      color: #bbb;
+      text-align: right;
+    }
 
+    /* מובייל */
     @media (max-width:640px){
       header{ padding:60px 16px; }
       header h1{ font-size:1.9em; }
@@ -108,6 +114,7 @@
   </header>
 
   <main>
+    <!-- התהליך -->
     <section>
       <h2>התהליך</h2>
       <p>
@@ -117,6 +124,7 @@
       </p>
     </section>
 
+    <!-- מה תרוויחו -->
     <section>
       <h2>מה תרוויחו?</h2>
       <ul>
@@ -127,6 +135,7 @@
       </ul>
     </section>
 
+    <!-- מי אני -->
     <section>
       <h2>מי אני</h2>
       <p>
@@ -137,6 +146,7 @@
       </p>
     </section>
 
+    <!-- מה אני מציע -->
     <section>
       <h2>מה אני מציע?</h2>
       <ul>
@@ -146,20 +156,27 @@
       </ul>
     </section>
 
-    <!-- חלק חדש: קצת ממה שלקוחות אומרים -->
+    <!-- קצת ממה שלקוחות אומרים -->
     <section>
       <h2>קצת ממה שלקוחות אומרים</h2>
+
       <div class="testimonial">
         רק היה לי חשוב להגיד לך תודה. היום היה לו עימות עם המאמן, רק שהפעם הוא נשם וסיפר לאבא שלו שבזכותך הוא התאפק וענה באלגנטיות.
-        <br>
-        אמא לספורטאי כותבת על התגובה של הילד שלה לאחר משחק: "המנטלי ממש עזר לי, שיחקתי טוב', וזה בכלל בלי ששאלתי".
+        <span class="author">אמא של שחקן כדורסל</span>
       </div>
+
+      <div class="testimonial">
+        אמא של שחקן כדורסל כותבת על התגובה של הילד שלה לאחר משחק: "המנטלי ממש עזר לי, שיחקתי טוב', וזה בכלל בלי ששאלתי".
+      </div>
+
       <div class="testimonial">
         רוצה שוב להודות לך על סדנה מדהימה. הפידבקים של המשתתפים אמרו הכל... הדרך הייחודית שלך בה העברת את התוכן,
         העניקה להם הזדמנות ללמוד בצורה חוויתית ולהפנים כלים לחיים. תודה רבה.
+        <span class="author">מנהלת הסדנה</span>
       </div>
     </section>
 
+    <!-- גלריה -->
     <section>
       <h2>מהשטח</h2>
       <div class="gallery">
@@ -170,6 +187,7 @@
       </div>
     </section>
 
+    <!-- יצירת קשר -->
     <section>
       <h2>מעניין אתכם לשמוע עוד?</h2>
       <p>
@@ -187,6 +205,8 @@
     © <span id="y"></span> דותן אבירם – אימון מנטלי לספורטאים וספורטאיות
   </footer>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
