@@ -42,7 +42,7 @@
 
     h2{ color:#ff3b30; font-weight:800; font-size:32px; margin:0 0 14px 0; text-align:right; }
     p{ line-height:1.6; }
-    ul{ margin:0 0 0 0; padding-right:1.2em; line-height:1.7; }
+    ul{ margin:0; padding-right:1.2em; line-height:1.7; }
     li{ margin:4px 0; }
 
     .cta{ text-align:center; margin-top:30px; }
@@ -61,10 +61,36 @@
       width:100%; height:240px; object-fit:cover;
       border-radius:12px; border:1px solid #333;
     }
-    /* חיתוך מותאם לפי תמונה */
     .gallery img.run{ object-position:50% 25%; }
     .gallery img.jym{ object-position:50% 30%; }
     .gallery img.portrait{ object-position:50% 20%; }
+
+    /* עיצוב לציטוטי לקוחות */
+    .testimonial {
+      background: rgba(255,255,255,0.05);
+      border-right: 4px solid #ff3b30;
+      padding: 16px 20px;
+      margin: 16px 0;
+      border-radius: 6px;
+      font-style: italic;
+      position: relative;
+    }
+    .testimonial::before {
+      content: "❝";
+      font-size: 28px;
+      color: #ff3b30;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+    .testimonial::after {
+      content: "❞";
+      font-size: 28px;
+      color: #ff3b30;
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+    }
 
     @media (max-width:640px){
       header{ padding:60px 16px; }
@@ -82,7 +108,6 @@
   </header>
 
   <main>
-    <!-- התהליך -->
     <section>
       <h2>התהליך</h2>
       <p>
@@ -92,7 +117,6 @@
       </p>
     </section>
 
-    <!-- מה תרוויחו -->
     <section>
       <h2>מה תרוויחו?</h2>
       <ul>
@@ -103,18 +127,16 @@
       </ul>
     </section>
 
-    <!-- מי אני -->
     <section>
       <h2>מי אני</h2>
       <p>
         שמי דותן אבירם. כמי שמתחרה בספורט סבולת (איש ברזל, טריאתלונים) וכמי שחי ספורט ומדעי ההתנהגות מעל 20 שנה,
         אני מביא שילוב של ניסיון שטח עם בסיס מחקרי. אני מאמן מנטלי לספורטאים וספורטאיות במגוון ענפים
-        (כדורסל, כדורגל, טניס, בדמינטון, ועוד), עובד גם עם קבוצות נוער ובוגרים, ומלווה מנהלים/ות בארגונים
+        (כדורסל, כדורגל, טניס, בדמינטון, שחייה ועוד), עובד גם עם קבוצות נוער ובוגרים, ומלווה מנהלים/ות בארגונים
         בהטמעת כלים של חוסן וביצועים. הגישה שלי פרקטית, ממוקדת מטרות ומבוססת ראיות – כדי שתראו שיפור מדיד במגרש ובחיים.
       </p>
     </section>
 
-    <!-- מה אני מציע -->
     <section>
       <h2>מה אני מציע?</h2>
       <ul>
@@ -124,18 +146,30 @@
       </ul>
     </section>
 
-    <!-- גלריה -->
+    <!-- חלק חדש: קצת ממה שלקוחות אומרים -->
+    <section>
+      <h2>קצת ממה שלקוחות אומרים</h2>
+      <div class="testimonial">
+        רק היה לי חשוב להגיד לך תודה. היום היה לו עימות עם המאמן, רק שהפעם הוא נשם וסיפר לאבא שלו שבזכותך הוא התאפק וענה באלגנטיות.
+        <br>
+        אמא לספורטאי כותבת על התגובה של הילד שלה לאחר משחק: "המנטלי ממש עזר לי, שיחקתי טוב', וזה בכלל בלי ששאלתי".
+      </div>
+      <div class="testimonial">
+        רוצה שוב להודות לך על סדנה מדהימה. הפידבקים של המשתתפים אמרו הכל... הדרך הייחודית שלך בה העברת את התוכן,
+        העניקה להם הזדמנות ללמוד בצורה חוויתית ולהפנים כלים לחיים. תודה רבה.
+      </div>
+    </section>
+
     <section>
       <h2>מהשטח</h2>
       <div class="gallery">
         <img src="images/run.jpg" alt="תחרות – התמדה ומכוונות" class="run">
         <img src="images/jym.jpg" alt="סדנה במגרש" class="jym">
-        <img src="images/profile..jpeg" alt="פנים מאחורי השיטה" class="portrait"
+        <img src="images/profile.jpeg" alt="פנים מאחורי השיטה" class="portrait"
              onerror="this.onerror=null; this.src='images/profile.jpg';">
       </div>
     </section>
 
-    <!-- יצירת קשר -->
     <section>
       <h2>מעניין אתכם לשמוע עוד?</h2>
       <p>
